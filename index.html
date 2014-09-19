@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <title>Issues Dashboard</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="http://netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" media="screen" />
+    <link href="https://netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" media="screen" />
     <link href="css/style.css" rel="stylesheet" media="screen" />
   </head>
   <body>
@@ -99,18 +99,18 @@
         <span class="query_repos glyphicon glyphicon-refresh"></span>
         <span class="loader"><img src="img/loader.gif" width="16px" height="16px" alt="" /></span>
         <% if (matched_issue_count > 0) { %>
-          <a href="https://github.com/organizations/<%= name %>/dashboard/issues" target="_blank"><span class="badge"
+          <a href="httpss://github.com/organizations/<%= name %>/dashboard/issues" target="_blank"><span class="badge"
             <% if (matched_issue_count != open_issue_count) { %>
               title="<%= matched_issue_count %> of <%= open_issue_count %>"
             <% } %>
           ><%= matched_issue_count %></span></a>
         <% } %>
         <% if (matched_issue_count == null && open_issue_count > 0) { %>
-          <a href="https://github.com/organizations/<%= name %>/dashboard/issues" target="_blank"><span class="badge"><%= open_issue_count %></span></a>
+          <a href="httpss://github.com/organizations/<%= name %>/dashboard/issues" target="_blank"><span class="badge"><%= open_issue_count %></span></a>
         <% } %>
       </span>
       <img class="avatar" src="<%= avatar_url %>" height="36px" width="36px" alt="" />
-      <a href="https://github.com/<%= name %>" target="_blank"><%- name %></a>
+      <a href="httpss://github.com/<%= name %>" target="_blank"><%- name %></a>
       <% if (starred_repos.length > 0) { %>
         <span class="glyphicon glyphicon-star"></span>
       <% } %>
@@ -157,10 +157,10 @@
     </script>
 
 
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/json3/3.3.2/json3.min.js"></script>
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.6.0/underscore-min.js"></script>
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.1.2/backbone-min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/json3/3.3.2/json3.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.6.0/underscore-min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.1.2/backbone-min.js"></script>
 
     <script src="js/base64_encode.js"></script>
     <script src="js/issues_dashboard.js"></script>

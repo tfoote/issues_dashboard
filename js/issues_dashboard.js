@@ -4,7 +4,7 @@
  *
  * Copyright (c) 2013, Dirk Thomas
  * Distributed under the BSD 2-Clause license
- * https://github.com/dirk-thomas/issues_dashboard/
+ * httpss://github.com/dirk-thomas/issues_dashboard/
  **/
 
 (function(namespace) {

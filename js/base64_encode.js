@@ -1,12 +1,12 @@
 function base64_encode(data) {
-  // http://kevin.vanzonneveld.net
-  // +   original by: Tyler Akins (http://rumkin.com)
+  // https://kevin.vanzonneveld.net
+  // +   original by: Tyler Akins (https://rumkin.com)
   // +   improved by: Bayron Guevara
   // +   improved by: Thunder.m
-  // +   improved by: Kevin van Zonneveld (http://kevin.vanzonneveld.net)
+  // +   improved by: Kevin van Zonneveld (https://kevin.vanzonneveld.net)
   // +   bugfixed by: Pellentesque Malesuada
-  // +   improved by: Kevin van Zonneveld (http://kevin.vanzonneveld.net)
-  // +   improved by: Rafał Kukawski (http://kukawski.pl)
+  // +   improved by: Kevin van Zonneveld (https://kevin.vanzonneveld.net)
+  // +   improved by: Rafał Kukawski (https://kukawski.pl)
   // *     example 1: base64_encode('Kevin van Zonneveld');
   // *     returns 1: 'S2V2aW4gdmFuIFpvbm5ldmVsZA=='
   // mozilla has this native

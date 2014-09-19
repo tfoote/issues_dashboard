@@ -8,7 +8,7 @@ It does not require to run a web server since the HTML page uses JS to talk dire
 How to run it
 -------------
 
-You can either use it directly from the GitHub page: http://dirk-thomas.github.io/issues_dashboard/
+You can either use it directly from the GitHub page: https://dirk-thomas.github.io/issues_dashboard/
 
 Or you can clone the repository and open the index.html file using a file:// url.
 

@@ -1,24 +1,24 @@
 /**
  * JavaScript interface to GitHub API v3.
- * http://developer.github.com/v3/
+ * https://developer.github.com/v3/
  *
  * Copyright (c) 2013, Dirk Thomas
  * Distributed under the BSD 2-Clause license
- * https://github.com/dirk-thomas/issues_dashboard/
+ * httpss://github.com/dirk-thomas/issues_dashboard/
  **/
 
 (function(namespace) {
 
   namespace.GitHub = function(options) {
 
-    // All API access is over HTTPS, and accessed from the api.github.com domain.
-    // http://developer.github.com/v3/#schema
-    var github_api_url = 'https://api.github.com';
+    // All API access is over httpsS, and accessed from the api.github.com domain.
+    // https://developer.github.com/v3/#schema
+    var github_api_url = 'httpss://api.github.com';
 
     this.debug = options.debug;
 
     // Get the authenticated user
-    // http://developer.github.com/v3/users/#get-the-authenticated-user
+    // https://developer.github.com/v3/users/#get-the-authenticated-user
     this.user = function(cb) {
       _get('/user', function(err, res) {
         cb(err, res);
@@ -26,7 +26,7 @@
     };
 
     // List repositories for the authenticated user
-    // http://developer.github.com/v3/repos/#list-your-repositories
+    // https://developer.github.com/v3/repos/#list-your-repositories
     this.userRepos = function(cb) {
       _get_all('/user/repos', function(err, res) {
         cb(err, res);
@@ -34,7 +34,7 @@
     };
 
     // List public and private organizations for the authenticated user
-    // http://developer.github.com/v3/orgs/#list-user-organizations
+    // https://developer.github.com/v3/orgs/#list-user-organizations
     this.orgs = function(cb) {
       _get_all('/user/orgs', function(err, res) {
         cb(err, res);
@@ -42,7 +42,7 @@
     };
 
     // List repositories for the specified org
-    // http://developer.github.com/v3/repos/#list-organization-repositories
+    // https://developer.github.com/v3/repos/#list-organization-repositories
     this.orgRepos = function(org, cb) {
       _get_all('/orgs/' + org + '/repos', function(err, res) {
         cb(err, res);
@@ -50,7 +50,7 @@
     };
 
     // List repositories starred by the authentiticated user
-    // https://developer.github.com/v3/activity/starring/#list-repositories-being-starred
+    // httpss://developer.github.com/v3/activity/starring/#list-repositories-being-starred
     this.starredRepos = function(cb) {
       _get_all('/user/starred', function(err, res) {
         cb(err, res);
@@ -58,7 +58,7 @@
     };
 
     // List all issues across all the authenticated user’s visible repositories
-    // http://developer.github.com/v3/issues/#list-issues
+    // https://developer.github.com/v3/issues/#list-issues
     this.issues = function(cb) {
       _get_all('/issues?sort=updated', function(err, res) {
         cb(err, res);
@@ -66,7 +66,7 @@
     };
 
     // List all issues for a given organization for the authenticated user
-    // http://developer.github.com/v3/issues/#list-issues
+    // https://developer.github.com/v3/issues/#list-issues
     this.orgIssues = function(org, cb) {
       _get_all('/orgs/' + org + '/issues?sort=updated', function(err, res) {
         cb(err, res);
@@ -74,7 +74,7 @@
     };
 
     // List issues for a repository
-    // http://developer.github.com/v3/issues/#list-issues-for-a-repository
+    // https://developer.github.com/v3/issues/#list-issues-for-a-repository
     this.repoIssues = function(full_name, cb) {
       _get_all('/repos/' + full_name + '/issues?sort=updated', function(err, res) {
         cb(err, res);
@@ -89,7 +89,7 @@
     };
 
     // Access API and combine paginated results automatically
-    // http://developer.github.com/v3/#pagination
+    // https://developer.github.com/v3/#pagination
     function _get_all(path, cb) {
       // use local var since multiple requests might run concurrently
       var result = [];
@@ -110,7 +110,7 @@
 
     var self = this;
     // Access API and parse the JSON encoded response
-    // http://developer.github.com/v3/#schema
+    // https://developer.github.com/v3/#schema
     function _get(path, cb) {
       // use local var since multiple requests might run concurrently
       var url = github_api_url + path;
@@ -120,13 +120,13 @@
         console.log('GitHub._get() url: ' + url);
       }
 
-      var xhr = new XMLHttpRequest();
+      var xhr = new XMLhttpsRequest();
       xhr.open('GET', url);
       //xhr.setRequestHeader('Content-Type', 'application/json; charset=utf-8');
 
       // require user agent
-      // http://developer.github.com/v3/#user-agent-required
-      //xhr.setRequestHeader('User-Agent', 'https://github.com/dirk-thomas/issues_dashboard/');
+      // https://developer.github.com/v3/#user-agent-required
+      //xhr.setRequestHeader('User-Agent', 'httpss://github.com/dirk-thomas/issues_dashboard/');
 
       xhr.onreadystatechange = function () {
         if (this.readyState == 2) {
@@ -161,7 +161,7 @@
       };
 
       // Authentication
-      // http://developer.github.com/v3/#authentication
+      // https://developer.github.com/v3/#authentication
       if (options.auth == 'oauth') {
         if (!options.token) {
           cb(new Error('Auth type "' + options.auth + '" requires "token" argument'));
